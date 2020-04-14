@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:backgroundTint="@android:color/transparent"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="number"
+            android:maxLength="999999999"
+            android:maxLines="1"
+            android:paddingRight="20dp"
+            android:text="432000"
+            android:textColor="#304FFE"
+            android:textDirection="rtl"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            android:ems="10"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="999999999"
+            android:maxLines="1"
+            android:paddingRight="20dp"
+            android:text="1250"
+            android:textColor="#DD2C00"
+            android:textColorHint="@android:color/holo_blue_bright"
+            android:textDirection="rtl"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/subtract"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/button_click1"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:text="-"
+        android:textColor="@android:color/white"
+        android:textSize="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/equalto"
+        app:layout_constraintStart_toEndOf="@+id/multiply"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.84000003" />
+
+    <Button
+        android:id="@+id/divide"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/button_click1"
+        android:fontFamily="monospace"
+        android:text="/"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/equalto"
+        app:layout_constraintStart_toEndOf="@+id/subtract"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.84000003" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="70dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/buttin_click2"
+        android:elevation="0dp"
+        android:fontFamily="serif"
+        android:text="+"
+        android:textColor="@android:color/white"
+        android:textSize="60dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/equalto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toEndOf="@+id/equalto"
+        app:layout_constraintTop_toTopOf="@+id/divide"
+        app:layout_constraintVertical_bias="0.74" />
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/button_click1"
+        android:fontFamily="monospace"
+        android:text="X"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/equalto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.842" />
+
+    <Button
+        android:id="@+id/equalto"
+        android:layout_width="240dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="208dp"
+        android:background="@drawable/buttin_click2"
+        android:fontFamily="serif"
+        android:text="="
+        android:textColor="@android:color/white"
+        android:textSize="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/multiply" />
+
+    <TextView
+        android:id="@+id/operation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="X"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/multiply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.553" />
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        android:paddingRight="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+</android.support.constraint.ConstraintLayout>
