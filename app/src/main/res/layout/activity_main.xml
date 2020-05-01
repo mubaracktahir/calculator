@@ -7,22 +7,46 @@
     android:background="#000000"
     tools:context=".MainActivity">
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="36dp"
+        android:background="#EBEAEA"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="358dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
+        android:layout_marginTop="60dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+        <ImageButton
+            android:layout_margin ="20dp"
+            android:id="@+id/clear"
+            android:onClick= "deleteAll"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clear"/>
 
         <EditText
             android:id="@+id/editText2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="92dp"
+            android:layout_marginTop="10dp"
             android:backgroundTint="@android:color/transparent"
             android:ems="10"
             android:enabled="false"
@@ -30,7 +54,7 @@
             android:maxLength="999999999"
             android:maxLines="1"
             android:paddingRight="20dp"
-            android:text="432000"
+            android:text=""
             android:textColor="#304FFE"
             android:textDirection="rtl"
             android:textSize="40dp"
@@ -47,122 +71,145 @@
             android:maxLength="999999999"
             android:maxLines="1"
             android:paddingRight="20dp"
-            android:text="1250"
+            android:text=""
             android:textColor="#DD2C00"
-            android:textColorHint="@android:color/holo_blue_bright"
+            android:textColorHint="@android:color/darker_gray"
             android:textDirection="rtl"
             android:textSize="35dp"
             android:textStyle="bold" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/subtract"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="72dp"
-        android:background="@drawable/button_click1"
-        android:fontFamily="serif"
-        android:gravity="center"
-        android:paddingBottom="20dp"
-        android:text="-"
-        android:textColor="@android:color/white"
-        android:textSize="60dp"
-        app:layout_constraintBottom_toTopOf="@+id/equalto"
-        app:layout_constraintStart_toEndOf="@+id/multiply"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="0.84000003" />
 
-    <Button
-        android:id="@+id/divide"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="72dp"
-        android:background="@drawable/button_click1"
-        android:fontFamily="monospace"
-        android:text="/"
-        android:textColor="@android:color/white"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/equalto"
-        app:layout_constraintStart_toEndOf="@+id/subtract"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="0.84000003" />
-
-    <Button
-        android:id="@+id/add"
-        android:layout_width="70dp"
-        android:layout_height="160dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/buttin_click2"
-        android:elevation="0dp"
-        android:fontFamily="serif"
-        android:text="+"
-        android:textColor="@android:color/white"
-        android:textSize="60dp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/equalto"
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="280dp"
+        android:background="#EBEAEA"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
-        app:layout_constraintStart_toEndOf="@+id/equalto"
-        app:layout_constraintTop_toTopOf="@+id/divide"
-        app:layout_constraintVertical_bias="0.74" />
-
-    <Button
-        android:id="@+id/multiply"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="72dp"
-        android:background="@drawable/button_click1"
-        android:fontFamily="monospace"
-        android:text="X"
-        android:textColor="@android:color/white"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/equalto"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="0.842" />
-
-    <Button
-        android:id="@+id/equalto"
-        android:layout_width="240dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="208dp"
-        android:background="@drawable/buttin_click2"
-        android:fontFamily="serif"
-        android:text="="
-        android:textColor="@android:color/white"
-        android:textSize="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/multiply" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/operation"
+        android:id="@+id/symbol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:text="X"
         android:textColor="#FFFFFF"
         android:textSize="30dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/multiply"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.553" />
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
         android:id="@+id/answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:maxLines="1"
+        android:paddingRight="20dp"
+        android:textColor="@android:color/white"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:maxLines="1"
-        android:textColor="@android:color/white"
-        android:paddingRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.277">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/multiply"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button_click1"
+                    android:fontFamily="monospace"
+                    android:onClick="onMul"
+                    android:text="X"
+                    android:textColor="@android:color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/subtract"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button_click1"
+                    android:fontFamily="monospace"
+                    android:onClick="onSub"
+                    android:text="-"
+                    android:textColor="@android:color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/divide"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/button_click1"
+                    android:fontFamily="monospace"
+                    android:onClick="onDiv"
+                    android:text="/"
+                    android:textColor="@android:color/white"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/equalto"
+                android:layout_width="250dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttin_click2"
+                android:fontFamily="serif"
+                android:onClick="onEqu"
+                android:text="="
+                android:textColor="@android:color/white"
+                android:textSize="60dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="70dp"
+            android:layout_height="160dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/buttin_click2"
+            android:elevation="0dp"
+            android:fontFamily="serif"
+            android:onClick="onAdd"
+            android:text="+"
+            android:textColor="@android:color/white"
+            android:textSize="60dp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>
