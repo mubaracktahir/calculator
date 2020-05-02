@@ -199,7 +199,7 @@ class MainActivity : AppCompatActivity() {
         opera = operation
     }
 
-    /*
+    /**
     *
     * @return
     * returns the operator chosen by the user
